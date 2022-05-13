@@ -1,6 +1,6 @@
 const overlayElements = document.querySelectorAll(".overlayElementC");
 const tutorial = document.querySelector(".tutorial")
-let elementsPositionsX = [-250,-400,-550,-700];
+let elementsPositionsX = [-250,-400,-550,-700,-850,-1000,-1150];
 
 let currentActiveElement = 0;
 
@@ -34,6 +34,12 @@ function displayElement(index){
 function hideElement(){
     isActiveAnElement = false;
     overlayElements[currentActiveElement].classList.add("hide");
+    // setTimeout(function(){
+    //     overlayElements[currentActiveElement].classList.remove("fadeOut");
+    //     overlayElements[currentActiveElement].classList.add("hide");
+  
+    //   }, 1990); 
+
 }
 
 function ShowTutorial(){

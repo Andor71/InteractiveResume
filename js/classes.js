@@ -65,8 +65,6 @@ class Bonfire {
         this.framesCurrent = 0;
         this.framesElapsed = 0;
         this.framesHold = 7;
-
-        console.log(this.scale);
     }
 
     draw(s){

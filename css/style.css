@@ -56,24 +56,47 @@ div[class*="ElementC"]{
     right: 15%;
     top:10%;
     width: 40%;
-
-    /* text-align: center; */
     padding: 2rem;
 
-    animation: SlidInElements 2s;
+    animation: SlidInElements 1.5s;
+}
+.formDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30% !important;
+
+    padding: 3rem !important;
+}
+.formDiv h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+input{
+    margin-bottom: 1rem;
+    box-shadow: rgba(27, 4, 4, 0.24) 0px 3px 8px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 5px solid #84a98c;
+
+    color: black;
+}
+textarea{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 5px solid #84a98c;
 }
 
-span{
-    width: 5px;
-    height: 5px;
-    background-color: aliceblue;
-}
+
 @keyframes SlidInElements {
-    from{
-       transform: translateY(100%);
+    0%{
+       transform: translateY(-150%);
     }
-    from{
-        transform: translateY(-100%);
+    100%{
+        transform: translateY(0%);
      }
     
 }
@@ -82,19 +105,26 @@ div[class*="ElementC"] h1{
     text-align: center;
 }
 
-.hide{
-    display: none;
+/* .fadeOut{
+    animation: SlidOutElements 2s !important;
+} */
 
-    animation: SlidOutElements 2s;
+.hide{
+
+    animation: SlidOutElements 2s !important;
+    display: none;
 }
 @keyframes SlidOutElements {
-    from{
-       transform: translateY(-100%);
+    0%{
+        display: block;
+       transform: translateY(0%);
     }
-    from{
-        transform: translateY(100%);
-
+    99%{
+        transform: translateY(-150%);
      }
+    100%{
+        display: hide;
+    }
     
 }
 .startDiv{

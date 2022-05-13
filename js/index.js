@@ -91,11 +91,12 @@ function animate(){
 
         }
         if(keys.d.pressed && !keys.a.pressed) {
-            overLayVelocity= -overLayVelocitySpeed;
+            if(bonFire.position.x +50 <= signs[signs.length-1].position.x){
+                overLayVelocity= -overLayVelocitySpeed;
+            }
 
         }
     }
-
     //Updateting playerposition by velocity to track progress on the screen.
     playerPosition += overLayVelocity;
 
@@ -105,7 +106,6 @@ function animate(){
 
 
     let atASign = false;
-
     //Checking if the player hit an element mark, so we can call the given element to show up on the screen.
     
     for(let i = 0 ; i < signs.length ; i++){
@@ -117,7 +117,8 @@ function animate(){
             }
         }
     }   
-    if(!atASign){
+
+    if(!atASign && isActiveAnElement){;
         hideElement();
     }
     //Starting Animations 
@@ -131,8 +132,7 @@ animate();
 
 function StartingAnimations(){
     bonFire.position.x += overLayVelocitySpeed;
-    console.log(overLayVelocity);
-    console.log( bonFire.position.x );
+
     if(bonFire.position.x >= endPostionX){
         playerAnimationEnded = true;
 
