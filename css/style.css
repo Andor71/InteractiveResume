@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: white;
+    font-size: medium;
+}
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+img{
+    max-width: 10%;
+}
+.tutorial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    animation: shake 3s infinite;
+}
+
+@keyframes shake {
+    20%{transform: translateX(6px);}
+    40%{transform: translateX(-6px);}
+    80%{transform: translateX(6px);}
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+.overlayElements{
+    height: 100%;
+}
+hr{
+    height: 3px !important;
+    width: 130px;
+    text-align: center;
+    position: relative;
+    background: gray;
+    margin: 1rem auto !important;
+    margin-bottom: 20px;
+    border: 0;
+}
+
+div[class*="ElementC"]{
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    position: absolute;
+    right: 15%;
+    top:10%;
+    width: 40%;
+
+    /* text-align: center; */
+    padding: 2rem;
+
+    animation: SlidInElements 2s;
+}
+
+span{
+    width: 5px;
+    height: 5px;
+    background-color: aliceblue;
+}
+@keyframes SlidInElements {
+    from{
+       transform: translateY(100%);
+    }
+    from{
+        transform: translateY(-100%);
+     }
+    
+}
+
+div[class*="ElementC"] h1{
+    text-align: center;
+}
+
+.hide{
+    display: none;
+
+    animation: SlidOutElements 2s;
+}
+@keyframes SlidOutElements {
+    from{
+       transform: translateY(-100%);
+    }
+    from{
+        transform: translateY(100%);
+
+     }
+    
+}
+.startDiv{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/background/SS.png);
+    background-size: cover;
+}
+.text{
+    text-align: center;
+    margin-bottom: 35%;
+}
+.text h1{
+    font-size: 6rem;
+}
+.text h2{
+    font-size: 2rem;
+}
+@keyframes LoadIn {
+    from {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
+    }
+    to {
+
+        clip-path: polygon(0% 0%, 0% 0%, 0% 50%, 0% 100%, 0% 100%);
+    }
+  }
+
+
