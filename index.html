@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pál Andor</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- <div class="loadingScreen">
+            <h1>
+                <span class="let1">l</span>  
+                <span class="let2">o</span>  
+                <span class="let3">a</span>  
+                <span class="let4">d</span>  
+                <span class="let5">i</span>  
+                <span class="let6">n</span>  
+                <span class="let7">g</span>  
+                <span class="let8">.</span>  
+                <span class="let9">.</span>  
+                <span class="let10">.</span>  
+            </h1>
+        </div> -->
+        <div class="startDiv">
+            <div class="text">
+                <h1>Welcome</h1>
+                <h2>Click to start !</h2>
+            </div>
+        </div>
+
+        <div class="overlay">
+            <div class="overlayElements">
+                <div class="tutorial hide">
+                    <p>To move!</p>
+                    <br>
+                    <img src="./img/WASD.png" alt="">
+                </div>
+                
+                <div class="overlayElementC hide">
+                    <img src="" alt="">
+                    <h1>Hello !</h1>
+                    <hr>
+                    <p>My name is Pál Andor and Welcome to my interactive resume.
+                    </p>
+                </div>
+                <div class="overlayElementC hide">
+                    <h1>About Me</h1>
+                    <hr>
+                    <p>I am a computer science student at Sapientia Hungarian 
+                        University of Transylvania! Mainly focused on software development
+                        spacialy front end development.
+                        <br>
+                        <br> I consider myself a hardoworker who
+                        cant sleep in peace if a job isnt finished, it means mostly that I am flexible
+                        in my working hours, being able to work evenings and weekends. 
+                        <br>
+                        <br>
+                        I have experience working as part of a team and individually.
+                        Co-workers rely on me to be on time so we can work as a team
+                         to provide imaginative solutions for our customers. 
+                        It is a pleasure for me to work in teams because we can race who comes up whit a more 
+                        creative approach to a problem </p>
+                </div>
+                <div class="overlayElementC hide">
+                    <h1>Educations</h1>
+                    <hr>
+                    <ul>
+                        <li>2019 - now  | Sapientia Hungarian University of Transylvania - Computer Science</li>
+                        <li>2015 - 2019 | Petru Maior High School (Reghin) - Informatics</li>
+                    </ul>
+                    <br>
+                    <h1>Curses</h1>
+                    <hr>
+                    <ul>
+                        <li>
+                            2021 - 2021 | <a target="_blank" href="https://www.u-hub.ro/mentorprogram/">U-Hub mentoring program</a> 
+                        </li>
+                    </ul>
+                    <br>
+                    <h1>Work Experience</h1>
+                    <hr>
+                    <ul>
+                        <li>
+                            2021 - 2021 | Summer Practice at Cognitive Creators
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="overlayElementC hide">
+                    <h1>Skills</h1>
+                    <hr>
+                    <p>I consider my biggest skills are that 
+                    i am a reliable person whom they can count on at anytime 
+                    and I am always energetic and eager to learn new skills.
+                    <br>
+                    <p>
+                        My comuniacation skill also includes that i am able
+                         to speak 3 languages : Hungarian , Romanina and English.
+                    </p>
+                    <br>
+                    <p>
+                        I am experienced at multiple coding langueges: C++
+                        , C, Python, Java, Haskell, HTML/CSS, JavaScript.</p>
+                    </p>
+                    <br>
+                    <p>
+                        I am experienced at using more and more tools to help myself
+                        being more productive like <a href="https://github.com/Werozg">
+                        GitHub</a>, Kanban boards , Sourcetree.
+
+                    </p>
+
+                </div>
+                <div class="overlayElementC hide">
+                    <h1>Hobbies</h1>
+                    <hr>
+                        <p>
+                            My mainly hobbies are creating websites and working out to get 
+                            fit and healthy, but I prefer to schedule my time so i can 
+                            participate in as many intresting and productive things as possible,
+                             it could be hanging out, watching series, reading a book everything.
+                        </p>
+                </div>
+                <div class="overlayElementC hide">
+                    <h1>Portofolio</h1>
+                    <hr>
+                        <p>
+                            There are some websites created by myself:
+                            <ul>
+                                <li><a href="http://www.korondi-panziok.ro/">www.korondi-panziok.ro</a></li>
+                                <li><a href="http://bocanci-arpad.ro/">http://bocanci-arpad.ro/</a></li>
+                            </ul>
+                        </p>
+                </div>
+
+                <div class="formDiv overlayElementC">
+                    <form target="_blank" action="https://formsubmit.co/pal.andor71@gmail.com" method="POST"> 
+                        <h1 class="title">Contact Me !</h1>
+                        <hr>
+                        <div>    
+                            <input type="text" name="name" id="name" placeholder="Name" required pattern="^[A-Z][a-zA-Z]*$" >
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="Email" required >
+                        </div>
+                        <div>
+                            <textarea name="area" id="area" cols="30" rows="10"placeholder="Message" required></textarea>
+                        </div>
+                            <input type="submit" name="Mehet" value="Send" id="SendBtn">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <canvas class="mainCanvas"></canvas>
+    </div>
+
+    <script src="./js/loadinScreen.js"></script>
+    <script src="./js/classes.js"></script>
+    <script src="./js/displayElements.js"></script>
+    <script src="./js/parallax.js"></script>
+    <script src="./js/utilis.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
