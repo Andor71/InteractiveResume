@@ -10,6 +10,21 @@
 <body>
 
     <div class="container">
+
+        <!-- <div class="loadingScreen">
+            <h1>
+                <span class="let1">l</span>  
+                <span class="let2">o</span>  
+                <span class="let3">a</span>  
+                <span class="let4">d</span>  
+                <span class="let5">i</span>  
+                <span class="let6">n</span>  
+                <span class="let7">g</span>  
+                <span class="let8">.</span>  
+                <span class="let9">.</span>  
+                <span class="let10">.</span>  
+            </h1>
+        </div> -->
         <div class="startDiv">
             <div class="text">
                 <h1>Welcome</h1>
@@ -122,18 +137,18 @@
                         </p>
                 </div>
 
-                <div class="formDiv overlayElementC hide">
-                    <form target="_blank" action="https://formsubmit.co/werozg71@gmail.com" method="POST"> 
+                <div class="formDiv overlayElementC">
+                    <form target="_blank" action="https://formsubmit.co/pal.andor71@gmail.com" method="POST"> 
                         <h1 class="title">Contact Me !</h1>
                         <hr>
                         <div>    
-                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="text" name="name" id="name" placeholder="Name" required pattern="^[A-Z][a-zA-Z]*$" >
                         </div>
                         <div>
-                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="email" name="email" id="email" placeholder="Email" required >
                         </div>
                         <div>
-                            <textarea name="area" id="area" cols="30" rows="10"placeholder="Message"></textarea>
+                            <textarea name="area" id="area" cols="30" rows="10"placeholder="Message" required></textarea>
                         </div>
                             <input type="submit" name="Mehet" value="Send" id="SendBtn">
                     </form>
@@ -144,10 +159,12 @@
         <canvas class="mainCanvas"></canvas>
     </div>
 
+    <script src="./js/loadinScreen.js"></script>
     <script src="./js/classes.js"></script>
     <script src="./js/displayElements.js"></script>
     <script src="./js/parallax.js"></script>
     <script src="./js/utilis.js"></script>
     <script src="./js/index.js"></script>
+
 </body>
 </html>

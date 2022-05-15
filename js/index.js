@@ -58,7 +58,7 @@ const keys = {
 }
 //Update loop
 function animate(){
-
+    //Draw Section START
     //Calling this function everyframe
     window.requestAnimationFrame(animate);
     // Clear Screen
@@ -79,6 +79,9 @@ function animate(){
         bonFire.update();
     }
 
+    parllaxEffectDrawFront(overLayVelocity);
+
+    //Draw Section END
     overLayVelocity = 0;
 
     if(isItStarted && playerAnimationEnded){
@@ -125,6 +128,8 @@ function animate(){
     if(isItStarted && !playerAnimationEnded){
         StartingAnimations();
     }
+
+
 }
 
 animate();

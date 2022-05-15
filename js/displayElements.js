@@ -1,6 +1,6 @@
 const overlayElements = document.querySelectorAll(".overlayElementC");
 const tutorial = document.querySelector(".tutorial")
-let elementsPositionsX = [-250,-400,-550,-700,-850,-1000,-1150];
+let elementsPositionsX = [-300,-500,-700,-900,-1100,-1300,-1500];
 
 let currentActiveElement = 0;
 
@@ -33,12 +33,11 @@ function displayElement(index){
 
 function hideElement(){
     isActiveAnElement = false;
-    overlayElements[currentActiveElement].classList.add("hide");
-    // setTimeout(function(){
-    //     overlayElements[currentActiveElement].classList.remove("fadeOut");
-    //     overlayElements[currentActiveElement].classList.add("hide");
-  
-    //   }, 1990); 
+    overlayElements[currentActiveElement].style =  "animation: SlidOutElements 1.5s";
+    setTimeout(function(){
+        overlayElements[currentActiveElement].classList.add("hide");
+        overlayElements[currentActiveElement].style =  "";
+    }, 1500);   
 
 }
 

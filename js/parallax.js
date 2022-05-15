@@ -1,15 +1,25 @@
+//Images for the paralax effect
+
 const imagesSrc = [
-            "./img/background/j1.png",
-            "./img/background/j2.png",
+            //Cant lpoad first image idk why , using az a decoy.
+            "./img/background/j0.png",
+
+            "./img/background/j4.png",
             "./img/background/j3.png",
-            "./img/background/j4.png"
+            "./img/background/j2.png",
+            "./img/background/j1.png",
+            "./img/background/j0.png",
+            
 ]
-
-
+//OffsetSpeed
+let offset = [2, 1.3, .6, 0, .7];
+//Images objects array;
 let images = []
+//Created, renderable objects
 let bgs = []
 
-for(let i = 0 ; i < imagesSrc.length ; i ++){
+//Creating renderable objects , pushing them into bgs array
+for(let i = 0 ; i < imagesSrc.length ; i++){
     let image = new Image();
     image.src = imagesSrc[i];
     images.push(image);
@@ -20,20 +30,23 @@ for(let i = 0 ; i < imagesSrc.length ; i ++){
         },
         image:image,
     })
-    bgs.push(bg1);
+    //Front layer postiong change
+    if(i == imagesSrc.length-1){
+        bg1.position.x = -5000;
+    }
+    //Cant lpoad first image idk why , using az a decoy.
+    if(i != 0){
+        bgs.push(bg1);
+    }
 }
 
+
+//Cant load fisrt image so using loop by shifting one index
 function parllaxEffectDraw(overLayVelocity){
-
-    let offset = [2, 1.2, 1, .6, 1.2, 1 , 0.5];
-
-    for(let i = bgs.length-1 ; i >= 0 ; i--){
+    for(let i = 0 ; i < bgs.length ; i++){
         bgs[i].draw(overLayVelocity,offset[i]);
     }
-
-    for(let i = 0 ; i < images.length ; i++){
-        if((playerPosition + 100) > images[i].width){
-            
-        }
-    }
+}
+function parllaxEffectDrawFront(overLayVelocity){    
+    bgs[bgs.length-1].draw(overLayVelocity,offset[offset.length-1]);
 }
